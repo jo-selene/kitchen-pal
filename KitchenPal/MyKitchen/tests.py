@@ -1,5 +1,17 @@
+# File Name:        MyKitchen/tests.py
+# Creation Date:    4/25/2018
+# Last Edited:      4/28/2018
+# Author(s):        Jocelyne Perez
+#
+# Purpose:          The purpose of this file is to write all test cases related to the 'MyKitchen'
+#                   model.
+#
+# Notes:            To run test cases, go to root folder of this project and run the command
+#                   $ python manage.py test
+
 from django.test import TestCase
-from .models import MyKitchen, Food
+from .models import MyKitchen
+from Food.models import Food
 
 
 # Create your tests here.
@@ -11,11 +23,11 @@ class MyKitchenModelTestCase(TestCase):
         """ Test the creation of a users kitchen. This will mean all the food items that the
             user currently has in their home."""
         
-        self.bananas = Food(1,"Fruit",1,"Week","Fridge","Keep in fridge before they get brown spots")
-        self.chicken = Food(2,"Poultry",3,"Months","Freezer","Keep each chicken breast in its own ziplock bag and freeze")
-        self.items = [self.bananas,self.chicken]
-        self.ID = "User ID"
-        self.kitchen = MyKitchen(ID=self.ID, Items=self.items)
-        
+        self.user = "Kenny"
+        self.itemID = 'Banana'
+
+        self.kennysKitchen = MyKitchen(user=self.user,itemID=self.itemID)
+
+   
 
 

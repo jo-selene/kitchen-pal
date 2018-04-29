@@ -1,23 +1,37 @@
+# File Name:        Food/tests.py
+# Creation Date:    4/25/2018
+# Last Edited:      4/28/2018
+# Author(s):        Jocelyne Perez
+#
+# Purpose:          The purpose of this file is to write all test cases related to the 'Food'
+#                   model.
+#
+# Notes:            To run test cases, go to root folder of this project and run the command
+#                   $ python manage.py test
+
+
 from django.test import TestCase
 from .models import Food
 
-# Create your tests here.
 
 class FoodModelTestCase(TestCase):
     """ This class defines the test suite for the Food model """
-    
+
     def setUp(self):
         """ This method tests to see whether or not an instance of the Food model can
             be created successfully or not. """
         
-        self.ID = 1
+        
+        self.name = "Cilantro"
         self.type = "Type"
         self.longevity = 2
         self.longevityType = "Weeks"
         self.storageType = "Fridge"
         self.storageTips = "Store in a ziplock bag and puncture a few holes in the bag"
         
-        self.Food = Food(ID = self.ID, type = self.type, longevity = self.longevity,
+        
+        
+        self.Food = Food(name= self.name, type = self.type, longevity = self.longevity,
                          longevityType = self.longevityType, storageType = self.storageType,
                          storageTips = self.storageTips)
     
@@ -27,7 +41,7 @@ class FoodModelTestCase(TestCase):
         
         old_count = Food.objects.count()
         self.Food.save()
-        new_count = Food.object.count()
+        new_count = Food.objects.count()
         self.assertNotEqual(old_count,new_count)
 
 
