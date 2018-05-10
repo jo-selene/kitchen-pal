@@ -20,10 +20,11 @@ from Food.models import Food
 class MyKitchen(models.Model):
     """ This class represents the kitchen model """
 
-    user = models.CharField(max_length=50)
-    itemID = models.CharField(max_length=50)
-
+    user = models.CharField(max_length=50,primary_key="True")
+    food_ID = models.CharField(max_length=50,primary_key="True")
+    
     def __str__(self):
-        return '{}'.self.user
+        return '{}:{}'.format(self.user,self.food_ID)
+
 
     

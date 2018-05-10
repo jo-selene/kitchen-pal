@@ -14,6 +14,7 @@ from django.db import models
 
 class Food(models.Model):
     """ This class will represent Food objects """
+    food_ID = models.IntegerField(primary_key="True")
     name = models.CharField(max_length=50,unique=True)
     type = models.CharField(max_length=50)
     longevity = models.IntegerField(default=0)

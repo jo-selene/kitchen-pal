@@ -12,8 +12,12 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
+#DATABASE_PATH = os.path.dirname("/Users/jocelyne/Documents/Workspaces/Github Repo/kitchen-pal/KITCHEN_PAL.db")
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Food',
     'MyKitchen',
+    'Recipes',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +83,7 @@ WSGI_APPLICATION = 'KitchenPal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'kitchen_pal_db.sqlite3'),
     }
 }
 

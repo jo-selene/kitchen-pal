@@ -21,7 +21,7 @@ class FoodModelTestCase(TestCase):
         """ This method tests to see whether or not an instance of the Food model can
             be created successfully or not. """
         
-        
+        self.food_ID = 1234
         self.name = "Cilantro"
         self.type = "Type"
         self.longevity = 2
@@ -31,17 +31,21 @@ class FoodModelTestCase(TestCase):
         
         
         
-        self.Food = Food(name= self.name, type = self.type, longevity = self.longevity,
-                         longevityType = self.longevityType, storageType = self.storageType,
-                         storageTips = self.storageTips)
+        self.cilantro = Food(food_ID=self.food_ID, name= self.name, type = self.type, longevity =  self.longevity,longevityType = self.longevityType, storageType = self.storageType, storageTips = self.storageTips)
     
     def testFoodModelCanBeAddedToDatabase(self):
         """ This method tests to see whether or not a new Food item can be added to the
             database """
         
         old_count = Food.objects.count()
-        self.Food.save()
+        self.cilantro.save()
         new_count = Food.objects.count()
         self.assertNotEqual(old_count,new_count)
+
+    def testStrMethodWorks(self):
+        self.cilantro.save()
+        food_string = Food.objects.get(name="Cilantro")
+        print(food_string)
+
 
 
