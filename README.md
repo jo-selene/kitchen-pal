@@ -8,11 +8,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-1) Python 3.6.4.
+1) Python 3.6.4
 2) Django 2.1
 3) Virtualenv
 
-To install Python, download the binary file from https://www.python.org/downloads/release/python-364/.
+To install Python, download the binary file from https://www.python.org/downloads/release/python-364/
 
 Check the version of Python by opening terminal and typing:
 ```
