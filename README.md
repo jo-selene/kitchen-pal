@@ -16,7 +16,7 @@ To install Python, download the binary file from https://www.python.org/download
 
 Check the version of Python by opening terminal and typing:
 ```
->>> python
+$ python
 ```
 You should see the following message:
 ```
@@ -28,18 +28,18 @@ You will need pip to install virtualenv and Django 2.1.
 
 If you do not have pip installed, type the following into terminal:
 ```
->>> xcode-select --install
->>> sudo easy_install pip
->>> sudo install --upgrade pip
+$ xcode-select --install
+$ sudo easy_install pip
+$ sudo install --upgrade pip
 ```
 
 To install virtualenv, type the following into terminal:
 ```
->>> sudo pip install virtualenv
+$ sudo pip install virtualenv
 ```
 To install Django 2.1, type the following into terminal:
 ```
->>> pip install Django==2.1
+$ pip install Django==2.1
 ```
 
 ### Installing
