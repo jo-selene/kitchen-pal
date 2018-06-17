@@ -39,11 +39,12 @@ To install virtualenv, type the following into terminal:
 ```
 To install Django 2.1, type the following into terminal:
 ```
-pip install Django==2.1
+>>> pip install Django==2.1
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
+COMING SOON!
 
