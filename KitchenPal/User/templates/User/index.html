@@ -1,0 +1,16 @@
+<!-- 
+# File Name:        User/templates/User/index.html
+# Creation Date:    5/21/2018
+# Last Edited:      5/21/2018
+# Author(s):        Jocelyne Perez
+#
+# Purpose:          The purpose of this file is to create a template for the create user view.
+#
+# Notes:            None
+ -->
+
+ <ul>
+ 	{% for user in all_users %}
+ 	<li><a href="/users/{{ user.user_ID }}/">{{ user.user_name }}</li>
+ 	{% endfor %}
+ </ul>
