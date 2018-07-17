@@ -34,3 +34,4 @@ class CreateUserView(generics.CreateAPIView):
 
 	def perform_create(self,serializer):
 		serializer.save()
+

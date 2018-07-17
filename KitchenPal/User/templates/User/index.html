@@ -8,9 +8,25 @@
 #
 # Notes:            None
  -->
+{% load static %}
 
- <ul>
- 	{% for user in all_users %}
- 	<li><a href="/users/{{ user.user_ID }}/">{{ user.user_name }}</li>
- 	{% endfor %}
- </ul>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Sacramento" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/user.css' %}">
+</head>
+<body>
+	<div>
+		<h1> All Users </h1>
+	</div>
+	{% if all_users %}
+	<ul>
+		{% for user in all_users %}
+	 	<li><a href="/users/{{ user.user_ID }}/">{{ user.user_name }}</a></li>
+	 	{% endfor %}
+	</ul>
+	{% else %}
+	<h3>There are no users to display</h3>
+	{% endif %}
+
+</body>
